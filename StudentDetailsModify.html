@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="form.css">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/F83F6E00-42FF-4741-B1BD-B18C2DE9CA81/main.js" charset="UTF-8">
+</script>
+<style>
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body style="background-color:black;">
+<div class="logo">
+<img src="ABESEC_logo.png" alt="ABES EC" float="left" height="130" width="110">
+<div class ="title">
+<u><font style="margin-left:-150px ; margin-top:60px; position:absolute; color:orange; " size="7px"><b><u>ABES  ENGINEERING  COLLEGE</u></b></font></u>
+
+</div>
+
+</div>
+
+<div class="navbar">
+  <a href="home.html">Home</a>
+  <a href="Createaccount.html">Registration</a>
+  <div class="dropdown">
+    <button class="dropbtn">Login As 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+     <a href="loginadmin.html">Admin</a>
+      <a href="loginstudent.html">Student</a>
+      <a href="loginfaculty.html">Faculty</a>
+     
+    </div>
+  </div> 
+<a href="AdmissionEnquiry.jsp">Admission Enquiry</a>
+<a href="Academics.jsp">Academics</a>
+
+<a href="Placement.jsp">Placement</a>
+<a href="Contact.jsp">ContactUs</a>
+<a href="home.html" style="margin-left:750px">Logout</a>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="StudentForm.html">Insert Student's Details </a>
+  <a href="FacultyForm.html">Insert Faculty's Details</a>
+  <a href="StudentDetailsModify.html">Update Student's Details</a>
+  <a href="FacultyDetailsModify.html">Update Faculty's Details</a>
+  <a href="StudentDetailsDelete.html">Delete Student's Details </a>
+  <a href="FacultyDetailsDelete.html">Delete Faculty's Details</a>
+  <a href="StudentDetailsDisplay.html">Display Student's Details</a>
+  <a href="FacultyDetailsDisplay.html">Display Faculty's Details</a>
+  <a href="StudentDetailsSearch.html">Search Student's Details </a>
+  <a href="FacultyDetailsSearch.html">Search Faculty's Details</a>
+ <a href="AdminChangePassword.html">Change Password</a>
+</div>
+
+<div id="main">
+  <h2 style ="color:red;">Admin Functions</h2>
+  
+  <span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+     
+     
+<form class="modal-content" action ="Controller">
+    <div class="container">
+      <h1>Student's Details Modification Form</h1>
+    
+      <hr>
+      <label for="name"><b>Student Name</b></label>
+      <input type="text" placeholder="Enter Name" name="name" required>
+      
+      <label for="fname"><b>Father's Name</b></label>
+      <input type="text" placeholder="Enter Father's Name" name="fname" required>
+
+      <label for="email"><b>Email Id</b></label>
+      <input type="text" placeholder="Enter Email Id" name="email" required>
+
+     
+
+       <label for="bday"><b>Date Of Birth</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" id="bday" name="bday">
+       <br>
+       <br>
+               
+      <label for="name"><b>Gender</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Male<input type="radio" name="gender" value ="male" checked>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Female<input type="radio" name="gender" value ="female" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Others<input type="radio" name="gender" value ="other" ><br>
+      
+      <br>
+      <label for="address"><b> Address</b></label>
+      <address><input type="text" placeholder="Enter Address" name="addr" required></address>
+      
+       <label for="admissionno."><b> Admission No.</b></label>
+      <input type="text" placeholder="Enter Addmission No." name="admissionno" required>
+    
+     <labelfor="phone"><b>Phone Number:</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" id="phone" name="phone"placeholder="Enter Phone no." required />
+       <br>
+       
+         
+       
+       <label for="dateof"><b>Date of Admission</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" id="admission" name="dateofadmission">
+       <br>
+       <br>
+
+      <label for="branch"><b> Branch</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name ="branch">
+      <option value="Computer Science">Computer Science</option>
+      <option value ="Electronics">Electronics</option>
+      <option value ="Mechanical">Mechanical</option>
+      <option value ="Civil">Civil</option>
+      <option value ="Infomation Technology">Information Technology</option>
+      </select>
+      <br>
+      <br>
+      <label>
+           
+      <label for="course"><b> Course </b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <select name ="course">
+      <option value="B.Tech">B.tech</option>
+      <option value ="MBA">MBA</option>
+      <option value ="BCA">BCA</option>
+      <option value ="MCA">MCA</option>
+      <option value ="M.tech">M.Tech</option>
+      </select>
+      <br>
+      <br>
+       <label for="sem"><b>Semester</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" placeholder="Enter Semester" name="sem" required>
+      <br>
+      <br>
+      
+      <label for="year"><b>Year</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="number" placeholder="Enter Year" name="year" required>
+     
+      <div class="clearfix">
+      
+      <input type="submit" class="signupbtn" value="MODIFY" name ="c1" />
+      </div>
+    </div>
+  </form>
+  
+</body>
+</html>
